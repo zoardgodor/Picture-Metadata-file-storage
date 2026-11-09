@@ -1,5 +1,5 @@
-# Picture-Metadata-file-storage
-## PMFS
+# PMFS
+## Picture-Metadata-file-storage
 This is a README for my program's first version.
 _Sorry for my bad english. I am used Google Translator a lot for this_
 
