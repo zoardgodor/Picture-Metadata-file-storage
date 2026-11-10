@@ -14,7 +14,7 @@ a real, working PNG file. After that, the program asks for a path to a file. Thi
 hided. The program checks the file is bigger than 25 MiB.
 - Maximum original file size: 25 MiB (actual compatibility may depend on the software handling the PNG).
 The program reads the bytes of the file, and code that into Base64. The Base64 data is going to
-writed into the PNG as a iTXt metadata.
+write into the PNG as a iTXt metadata.
 
 ## Extract
 The user choose a PNG file. The program checks is the selected PNG file is
