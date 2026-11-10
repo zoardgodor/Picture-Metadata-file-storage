@@ -18,7 +18,7 @@ write into the PNG as a iTXt metadata.
 
 ## Extract
 The user choose a PNG file. The program checks is the selected PNG file is
-a real, working PNG file. After that, the program checks is there any hided file in the
+a real, working PNG file. After that, the program checks is there any hidden file in the
 PNG. If there is, the program is reading out the Base64, and decoding that, and makes the new file.
 The original and the extracted files are the same.
 
