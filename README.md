@@ -36,3 +36,7 @@ file without the metadata. The original file remains untouched.
 - Pyinstaller for make a .exe file
 
 If you want to recreate the .exe file, just install Pyinstaller, and run the command from the pyinstaller.txt file.
+
+## Future plans:
+GUI with tkinter
+Custom output filename
