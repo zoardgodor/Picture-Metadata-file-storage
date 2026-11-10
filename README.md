@@ -9,9 +9,9 @@ Users can select any PNG image as a carrier file and choose which file they want
 There are 3 tools:
 
 ## Hide:
-The user choose a PNG file. The program checks the selected PNG file is
-a real, working PNG file. After that, the program asks for a path to a file. This file is going to be
-hided. The program checks the file is bigger than 25 MiB.
+The user choses a PNG file. The program checks if the selected PNG file is
+valid PNG file. After that, the program asks for the path to a file. This file is going to be
+hidden. The program checks if the file is bigger than 25 MiB.
 - Maximum original file size: 25 MiB (actual compatibility may depend on the software handling the PNG).
 The program reads the bytes of the file, and code that into Base64. The Base64 data is going to
 write into the PNG as a iTXt metadata.
