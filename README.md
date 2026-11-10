@@ -13,18 +13,18 @@ The user choses a PNG file. The program checks if the selected PNG file is
 valid PNG file. After that, the program asks for the path to a file. This file is going to be
 hidden. The program checks if the file is bigger than 25 MiB.
 - Maximum original file size: 25 MiB (actual compatibility may depend on the software handling the PNG).
-The program reads the bytes of the file, and code that into Base64. The Base64 data is going to
-write into the PNG as a iTXt metadata.
+The program reads the bytes of the file, and codes that into Base64. The Base64 data is going to be written
+into the PNG as a iTXt metadata.
 
 ## Extract
-The user choose a PNG file. The program checks is the selected PNG file is
-a real, working PNG file. After that, the program checks is there any hidden file in the
-PNG. If there is, the program is reading out the Base64, and decoding that, and makes the new file.
+The user choses a PNG file. The program checks if the selected PNG file is
+valid PNG file. After that, the program checks if there any hidden file in the
+PNG. If there is, the program decodes the Base64, and makes the new file.
 The original and the extracted files are the same.
 
 ## Remove hidden file
-The user choose a PNG file. The program checks the selected PNG file is
-a real, working PNG file. After that, the program checks is there any PMFT
+The user choses a PNG file. The program checks if the selected PNG file is
+valid PNG file. After that, the program checks is there any PMFT
 file-s are in the PNG. If there is, the program overwrites the metadatas.
 There is a chance the program removes some other metadatas. And makes a new PNG
 file without the metadatas. The original file remains untouched.
