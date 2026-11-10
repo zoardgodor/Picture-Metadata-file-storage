@@ -3,7 +3,7 @@
 This is a README for my program's first version.
 _Sorry for my poor english._
 
-PMFS is a tool that allows for hiding files within the iTXt metadata of an image.
+PMFS is a tool that allows hiding files within the iTXt metadata of an image.
 Users can select any PNG image as a carrier file and choose which file they want to hide.
 
 There are 3 tools:
