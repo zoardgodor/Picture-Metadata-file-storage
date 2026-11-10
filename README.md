@@ -23,7 +23,7 @@ PNG. If there is, the program is reading out the Base64, and decoding that, and 
 The original and the extracted files are the same.
 
 ## Remove hidden file
-The user choose a PNG file. The program checks is the selected PNG file is
+The user choose a PNG file. The program checks the selected PNG file is
 a real, working PNG file. After that, the program checks is there any PMFT
 file-s are in the PNG. If there is, the program overwrites the metadatas.
 There is a chance the program removes some other metadatas. And makes a new PNG
