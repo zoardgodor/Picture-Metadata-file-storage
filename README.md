@@ -18,16 +18,16 @@ into the PNG as a iTXt metadata.
 
 ## Extract
 The user choses a PNG file. The program checks if the selected PNG file is
-valid PNG file. After that, the program checks if there any hidden file in the
-PNG. If there is, the program decodes the Base64, and makes the new file.
+valid PNG file. After that, the program checks if there any hidden files in the
+PNG. If there is, the program decodes the Base64, and makes it into a new file.
 The original and the extracted files are the same.
 
 ## Remove hidden file
 The user choses a PNG file. The program checks if the selected PNG file is
-valid PNG file. After that, the program checks is there any PMFT
-file-s are in the PNG. If there is, the program overwrites the metadatas.
-There is a chance the program removes some other metadatas. And makes a new PNG
-file without the metadatas. The original file remains untouched.
+valid PNG file. After that, the program checks if there is any PMFT
+file-s in the PNG. If there is, the program overwrites the metadata.
+There is a chance the program removes some metadata and makes a new PNG
+file without the metadata. The original file remains untouched.
 
 ## Requirements
 
