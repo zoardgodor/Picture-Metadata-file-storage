@@ -1,7 +1,7 @@
 # PMFS
 ## Picture-Metadata-file-storage
 This is a README for my program's first version.
-_Sorry for my poor english. I am used Google Translate a lot while writing this._
+_Sorry for my poor english._
 
 PMFS is a tool that allows for hiding files within the iTXt metadata of an image.
 Users can select any PNG image as a carrier file and choose which file they want to hide.
@@ -9,7 +9,7 @@ Users can select any PNG image as a carrier file and choose which file they want
 There are 3 tools:
 
 ## Hide:
-The user choose a PNG picture. The program checks is the selected PNG file is
+The user choose a PNG file. The program checks is the selected PNG file is
 a real, working PNG file. After that, the program asks for a path to a file. This file is going to be
 hided. The program checks is the file is bigger than 25 MiB.
 - Maximum original file size: 25 MiB (actual compatibility may depend on the software handling the PNG).
