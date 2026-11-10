@@ -1,34 +1,38 @@
 # PMFS
 ## Picture-Metadata-file-storage
 This is a README for my program's first version.
-_Sorry for my bad english. I am used Google Translator a lot for this_
+_Sorry for my poor english. I am used Google Translate a lot while writing this._
 
 PMFS is a tool that allows for hiding files within the iTXt metadata of an image.
-Currently, the program uses `duck.png` as the base image into which the file is embedded.
-The selected file is converted into text (via `read_bytes()`), which is then encoded into Base64;
-this Base64 string is subsequently stored as metadata. The file itself (in Base64 format) is
-stored under the key "hiddenfile," while the filename is stored under the key "hiddenfilename."
-The program currently operates via a command-line interface (CLI). Upon startup, it prompts the
-user for the location of the file they wish to embed into the image's metadata. Once provided,
-the program verifies the file's existence; if found, it converts the file into Base64 and saves
-it—along with its original filename—into the metadata of `duck.png`. Finally, the program outputs
-a modified version of the image, named `duck_001.png`. If that filename already exists, it increments
-the number (e.g., `duck_002.png`, `duck_003.png`, and so on).
+Users can select any PNG image as a carrier file and choose which file they want to hide.
 
-For decoding, when prompted at the beginning to specify the location of the file to be hidden,
-simply press Enter without entering anything. You will then be able to select the image from whose
-metadata you wish to extract the file. The program verifies that the specified file exists; if it
-does, it checks for the presence of the two keys—one containing the file's content (encoded in Base64)
-and the other containing the filename. If these keys are found, the program extracts the data,
-decodes the Base64, and reconstructs the original file. For instance, if the original filename
-was `test.txt`, the decoded file will be named `test_001.txt` (or `test_002.txt` if the former already
-exists, and so on).
+There are 3 tools:
 
-## Plans for the future:
+## Hide:
+The user choose a PNG picture. The program checks is the selected PNG file is
+a real, working PNG file. After that, the program asks for a path to a file. This file is going to be
+hided. The program checks is the file is bigger than 25 MiB.
+- Maximum original file size: 25 MiB (actual compatibility may depend on the software handling the PNG).
+The program reads the bytes of the file, and code that into Base64. The Base64 data is going to
+writed into the PNG as a iTXt metadata.
 
-- Saving to the metadata of your own .png file
-- 001 is used when saving the decoded file if a
-file with the original filename already exists; otherwise,
-it would be saved using the original filename.
-- GUI or a better CLI interface
-- Executable .exe file created with PyInstaller
+## Extract
+The user choose a PNG file. The program checks is the selected PNG file is
+a real, working PNG file. After that, the program checks is there any hided PMFT file in the
+PNG. If there is, the program is reading out the Base64, and decoding that. and makes the new file.
+The original and the extracted files are the same.
+
+## Remove hidden file
+The user choose a PNG file. The program checks is the selected PNG file is
+a real, working PNG file. After that, the program checks is there any PMFT
+file-s are in the PNG. If there is, the program overwrites the metadatas.
+There is a chance the program removes some other metadatas. And makes a new PNG
+file without the metadatas. The original file remains untouched.
+
+## Requirements
+
+- Python 3
+- Pillow
+- Pyinstaller for make a .exe file
+
+If you want to recreate the .exe file, just install Pyinstaller, and run the command from the pyinstaller.txt file.
