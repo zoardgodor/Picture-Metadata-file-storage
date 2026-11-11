@@ -1,1 +1,5 @@
-pyinstaller --onefile --console --name PMFS mainn.py
+normal:
+pyinstaller --onefile --noconsole --noupx PMFS.py
+
+CLI:
+pyinstaller --onefile --console --noupx PMFS_old_cli.py

@@ -1,3 +1,5 @@
+import tkinter as tk
+from tkinter import filedialog,messagebox
 from pathlib import Path
 from PIL import Image
 from PIL.PngImagePlugin import PngInfo
@@ -66,6 +68,15 @@ def extract_file():
             if not imagepath.suffix.lower()==".png":
                     print("This picture is not a PNG file.")
                     return
+            try:
+                blabla=Image.open(imagepath)
+            except Exception:
+                print("Unable to open this image.")
+                return
+            image111=Image.open(imagepath)
+            if not image111.format=="PNG":
+                print("This picture is not a valid PNG file.")
+                return
             image = Image.open(imagepath)
             metadata=image.info
             if "hiddenfile" in metadata and "hiddenfilename" in metadata:
@@ -103,8 +114,16 @@ def deletefile():
     if not imagepath.suffix.lower()==".png":
             print("This picture is not a PNG file.")
             return
-    image = Image.open(imagepath)
-    metadata=image.info
+    try:
+        jfjf=Image.open(imagepath)
+    except Exception:
+        print("Unable to open this image.")
+        return
+    image222 = Image.open(imagepath)
+    if not image222.format=="PNG":
+        print("This picture is not a valid PNG file.")
+        return
+    metadata=image222.info
     if "hiddenfile" in metadata and "hiddenfilename" in metadata:
         newmetadata = PngInfo()
         counter=1
@@ -113,27 +132,28 @@ def deletefile():
             if not remoutput.exists():
                 break
             counter+=1
-        image.save(remoutput, "PNG", pnginfo=newmetadata)
+        image222.save(remoutput, "PNG", pnginfo=newmetadata)
         print(f"Hidden file removed. The new image is saved as {remoutput}.")
     else:
         print("No hidden file found in the image.")
 
 def main():
-    print("----PMFT----")
-    print("1. Hide a file in an image")
-    print("2. Extract a file from an image")
-    print("3. Delete a file from an image")
-    print("q - Exit")
-    choice=input("Enter your choice (1, 2, 3, or q): ").strip()
-    if choice=="1":
-        hide_file()
-    elif choice=="2":
-        extract_file()
-    elif choice=="3":
-        deletefile()
-    elif choice.lower()=="q":
-        print("Exiting...")
-        return
+    while True:
+        print("----PMFT----")
+        print("1. Hide a file in an image")
+        print("2. Extract a file from an image")
+        print("3. Delete a file from an image")
+        print("q - Exit")
+        choice=input("Enter your choice (1, 2, 3, or q): ").strip()
+        if choice=="1":
+            hide_file()
+        elif choice=="2":
+            extract_file()
+        elif choice=="3":
+            deletefile()
+        elif choice.lower()=="q":
+            print("Exiting...")
+            return
 
 if __name__ == "__main__":
     main()
